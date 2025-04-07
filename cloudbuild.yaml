@@ -6,7 +6,6 @@ steps:
       '-f', 'Dockerfile',
       '.'
     ]
-    dir: reddit_scraper
 
   - name: 'gcr.io/cloud-builders/docker'
     args: [
