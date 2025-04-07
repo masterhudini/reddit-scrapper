@@ -1,16 +1,16 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'europe-central2-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper', '-f', 'reddit_scraper/Dockerfile', '.']
+    args: ['build', '-t', 'global-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper', '-f', 'reddit_scraper/Dockerfile', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'europe-central2-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper']
+    args: ['push', 'global-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args: [
       'run', 'deploy', 'reddit-scraper',
-      '--image', 'europe-central2-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper',
-      '--region', 'europe-central2',
+      '--image', 'global-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper',
+      '--region', 'global',
       '--platform', 'managed',
       '--allow-unauthenticated'
     ]
