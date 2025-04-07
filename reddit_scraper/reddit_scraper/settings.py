@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=#qbv_e(b^b^)c(!3@m(_!q6pq8d9%63$rh&0*6hx+tb5z=jk#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['reddit-scraper-421290441723.europe-central2.run.app']
 
 
 # Application definition
