@@ -19,11 +19,10 @@ steps:
     args: [
       'run', 'deploy', 'reddit-scraper',
       '--image', 'europe-central2-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper',
-      '--region', 'global',
+      '--region', 'europe-central2',
       '--platform', 'managed',
       '--allow-unauthenticated'
     ]
-
 
 options:
   logging: CLOUD_LOGGING_ONLY
