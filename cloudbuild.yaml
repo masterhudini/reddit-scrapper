@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'global-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper', '-f', 'reddit_scraper/Dockerfile', '.']
+    args: ['build', '-t', 'global-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper', '-f', 'Dockerfile', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'global-docker.pkg.dev/my-reddit-scrapper/reddit-scraper-repo/reddit-scraper']
